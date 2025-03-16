@@ -1,4 +1,4 @@
-ith reviews as (
+with reviews as (
     select * from {{ ref('stg_boardgames__reviews') }}
 ),
 
