@@ -28,5 +28,10 @@ sources:
       - name: mechanics
       - name: publishers
       - name: rankings
+        description: Daily ranking of boardgames based on users ratings
+        freshness:
+          warn_after: {count: 24, period: hour}
+          error_after: {count: 48, period: hour}
+        loaded_at_field: '"updated_at"'
       - name: reviews
       - name: users
