@@ -2,7 +2,9 @@ selectors:
   - name: static_staging_models
     description: "Staging models with static data, not being updated."
     definition: 
-      method: tag
-      value: static 
-      exclude:
-        - 'tag:daily'
+      union:
+        - method: tag
+          value: static
+        - exclude: 
+            - method: tag
+              value: daily
