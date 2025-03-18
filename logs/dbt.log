@@ -1,0 +1,79 @@
+[0m11:10:58.404546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106750e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679d310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679cf20>]}
+
+
+============================== 11:10:58.407003 | cf05c42c-77e0-44dc-a80d-7ef181ba1559 ==============================
+[0m11:10:58.407003 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:10:58.407265 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ishuchalana/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'warn_error': 'None', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:10:58.414427 [info ] [MainThread]: dbt version: 1.9.2
+[0m11:10:58.414579 [info ] [MainThread]: python version: 3.12.8
+[0m11:10:58.414692 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+[0m11:10:58.414915 [info ] [MainThread]: os info: macOS-14.4-arm64-arm-64bit
+[0m11:10:58.836035 [info ] [MainThread]: Using profiles dir at /Users/ishuchalana/.dbt
+[0m11:10:58.836244 [info ] [MainThread]: Using profiles.yml file at /Users/ishuchalana/.dbt/profiles.yml
+[0m11:10:58.836364 [info ] [MainThread]: Using dbt_project.yml file at /Users/ishuchalana/Develop/DBT_CAPSTONE_PROJECT/dbt_project.yml
+[0m11:10:58.836505 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m11:10:58.849198 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.48834607, "process_in_blocks": "0", "process_kernel_time": 0.150317, "process_mem_max_rss": "111460352", "process_out_blocks": "0", "process_user_time": 0.585348}
+[0m11:10:58.849461 [debug] [MainThread]: Command `dbt debug` failed at 11:10:58.849416 after 0.49 seconds
+[0m11:10:58.849618 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10679d220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1057dae10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a1d310>]}
+[0m11:10:58.849780 [debug] [MainThread]: Flushing usage events
+[0m11:11:00.423416 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:12:45.293129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063388f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063851f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106384f20>]}
+
+
+============================== 11:12:45.294962 | 05dd24fd-fda5-4ff7-b743-ec722295d559 ==============================
+[0m11:12:45.294962 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:12:45.295233 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ishuchalana/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:12:45.298831 [info ] [MainThread]: dbt version: 1.9.2
+[0m11:12:45.298988 [info ] [MainThread]: python version: 3.12.8
+[0m11:12:45.299108 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+[0m11:12:45.299217 [info ] [MainThread]: os info: macOS-14.4-arm64-arm-64bit
+[0m11:12:45.374570 [info ] [MainThread]: Using profiles dir at /Users/ishuchalana/.dbt
+[0m11:12:45.374786 [info ] [MainThread]: Using profiles.yml file at /Users/ishuchalana/.dbt/profiles.yml
+[0m11:12:45.374918 [info ] [MainThread]: Using dbt_project.yml file at /Users/ishuchalana/Develop/DBT_CAPSTONE_PROJECT/dbt_project.yml
+[0m11:12:45.375062 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m11:12:45.375656 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.1194655, "process_in_blocks": "0", "process_kernel_time": 0.076909, "process_mem_max_rss": "111230976", "process_out_blocks": "0", "process_user_time": 0.527198}
+[0m11:12:45.375814 [debug] [MainThread]: Command `dbt debug` failed at 11:12:45.375777 after 0.12 seconds
+[0m11:12:45.375942 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1063850d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10631f3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104aeaff0>]}
+[0m11:12:45.376079 [debug] [MainThread]: Flushing usage events
+[0m11:12:46.631854 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:13:08.863406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10614cd70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106195430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106195160>]}
+
+
+============================== 11:13:08.865302 | 0d4fee34-774d-4acf-8025-9f765845fb85 ==============================
+[0m11:13:08.865302 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:13:08.865567 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ishuchalana/.dbt', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:13:08.869050 [info ] [MainThread]: dbt version: 1.9.2
+[0m11:13:08.869185 [info ] [MainThread]: python version: 3.12.8
+[0m11:13:08.869306 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12
+[0m11:13:08.869424 [info ] [MainThread]: os info: macOS-14.4-arm64-arm-64bit
+[0m11:13:08.944405 [info ] [MainThread]: Using profiles dir at /Users/ishuchalana/.dbt
+[0m11:13:08.944651 [info ] [MainThread]: Using profiles.yml file at /Users/ishuchalana/.dbt/profiles.yml
+[0m11:13:08.944777 [info ] [MainThread]: Using dbt_project.yml file at /Users/ishuchalana/Develop/DBT_CAPSTONE_PROJECT/dbt_project.yml
+[0m11:13:08.944922 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m11:13:08.945465 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.11909446, "process_in_blocks": "0", "process_kernel_time": 0.078534, "process_mem_max_rss": "110280704", "process_out_blocks": "0", "process_user_time": 0.528366}
+[0m11:13:08.945635 [debug] [MainThread]: Command `dbt debug` failed at 11:13:08.945599 after 0.12 seconds
+[0m11:13:08.945762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105689430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106039e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106a00230>]}
+[0m11:13:08.945897 [debug] [MainThread]: Flushing usage events
+[0m11:13:09.840320 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:13:45.349674 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045d0e00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104619430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104619040>]}
+
+
+============================== 11:13:45.351464 | f0aef256-8c6e-4534-adc6-6da64d9ae1f5 ==============================
+[0m11:13:45.351464 [info ] [MainThread]: Running with dbt=1.9.2
+[0m11:13:45.351733 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/ishuchalana/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': 'logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'invocation_command': 'dbt deps', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m11:13:45.352036 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/ishuchalana/Develop/DBT_CAPSTONE_PROJECT/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m11:13:45.352596 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.039742, "process_in_blocks": "0", "process_kernel_time": 0.071419, "process_mem_max_rss": "92684288", "process_out_blocks": "0", "process_user_time": 0.458389}
+[0m11:13:45.352765 [debug] [MainThread]: Command `dbt deps` failed at 11:13:45.352728 after 0.04 seconds
+[0m11:13:45.352905 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x100732bd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1045d07a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104141af0>]}
+[0m11:13:45.353024 [debug] [MainThread]: Flushing usage events
+[0m11:13:45.490429 [debug] [MainThread]: An error was encountered while trying to flush usage events
