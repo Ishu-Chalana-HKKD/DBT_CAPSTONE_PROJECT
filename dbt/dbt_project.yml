@@ -9,6 +9,9 @@ config-version: 2
 # This setting configures which "profile" dbt uses for this project.
 profile: 'boardgame_project'
 
+vars:
+  the_distant_future: '9999-12-31'
+
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
@@ -23,5 +26,15 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+
+
+# dbt_project.yml
+
+seeds:
+  dbt_capstone_project:
+      +schema: seeds
+      +column_types:
+        country_name: varchar(100)
+        country_code: varchar(3)
 
 
