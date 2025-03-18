@@ -1,0 +1,32 @@
+version: 2
+
+sources:
+  - name: boardgame
+    database: boardgame  
+    schema: raw  
+    tables:
+      - name: artists
+        description: Table with the artists names associated to their respective boardgames
+        columns:
+          - name: artists
+            description: Name of the artists responsible for the art and graphical design of the boardgame
+            tests:
+              - not_null
+          - name: game_id
+            description: Boardgame unique identifier
+            tests:
+              - not_null
+      - name: boardgames
+        description: Table with boardgames main properties
+        columns:
+          - name: weight
+            description: Boardgame unique identifier
+            tests:
+              - unique     
+      - name: categories
+      - name: designers
+      - name: mechanics
+      - name: publishers
+      - name: rankings
+      - name: reviews
+      - name: users
