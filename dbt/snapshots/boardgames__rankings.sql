@@ -1,14 +1,16 @@
 {% snapshot rankings %}
 
 {{
-  config(
-    target_schema='DBT_HTUNWAL',
-    unique_key='id',
-    strategy='timestamp',
-    updated_at='updated_at'
-  )
+    config(
+      target_schema='snapshots',
+      unique_key='id',
+      strategy='timestamp',
+      updated_at='updated_at',
+      tags="daily"
+    )
 }}
-select
+
+select 
     id,
     "Name",
     "Year",
@@ -19,7 +21,7 @@ select
     url,
     "Thumbnail",
     "updated_at" as updated_at
-  
-from {{source('boardgame','rankings')}}
+ 
+from {{ source('boardgame', 'rankings') }}
 
 {% endsnapshot %}
