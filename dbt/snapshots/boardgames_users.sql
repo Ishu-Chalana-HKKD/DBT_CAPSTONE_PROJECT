@@ -11,10 +11,10 @@
 
 select 
     _line,
-   "users",
-    "url",
-    "country",
-    "_fivetran_synced"
+    users,
+    url,
+    country,
+    _fivetran_synced
  
 from {{ source('boardgame', 'users') }}
 
