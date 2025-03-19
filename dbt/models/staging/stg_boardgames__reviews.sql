@@ -6,7 +6,7 @@ with final as (
         round(
             cast(
                 case
-                    when cast(rating as float) < 1 then 1
+                    when cast(rating as float) < 1 then '{{ var("min_accepted_num") }}'
                     else rating
                 end as int
             ), 0

@@ -1,5 +1,4 @@
 with
-
 reviews as (
     select * from {{ ref('stg_boardgames__reviews') }}
 ),
@@ -8,11 +7,12 @@ boardgames_filtered as (
     select
         *
     from {{ ref('stg_boardgames__boardgames') }}
+),
     where 
         boardgame_id in (select boardgame_id from reviews)
-        and boardgame_type <> 'boardgame'
-        and boardgame_avg_rating <> -1
-        and boardgame_avg_weight <> -1
+        and boardgame_type = '{{ var("boardgame_type") }}'
+        and boardgame_avg_rating <> '{{ var("number_unknown") }}'
+        and boardgame_avg_weight <> '{{ var("number_unknown") }}'
 )
 
 select * from boardgames_filtered

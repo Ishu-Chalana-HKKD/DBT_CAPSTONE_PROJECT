@@ -1,15 +1,25 @@
+{{ config(
+    tags="daily"
+) }}
+
 with
+
+rankings as (
+
+    select * from {{ ref('rankings') }}
+
+),
+
 final as (
 
     select
-        dbt_scd_id as ranking_key,
         id as boardgame_id,
         "Name" as boardgame_name,
         "Year" as boardgame_year_published,
         "Rank" as boardgame_rank,
         "Average" as boardgame_avg_rating,
         round(case
-            when "Bayes average" < 1 then 1
+            when "Bayes average" < 1 then '{{ var("min_accepted_num") }}'
             else "Bayes average"
         end, 2) as boardgame_bayes_avg_rating,
         "Users rated" as boardgame_total_reviews,
@@ -26,7 +36,7 @@ final as (
             cast( '{{ var("the_distant_future") }}' as timestamp)
         ) as valid_to
 
-    from {{ ref('rankings') }}
+    from rankings
 
 )
 
