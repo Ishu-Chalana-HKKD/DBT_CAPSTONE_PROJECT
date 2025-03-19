@@ -1,3 +1,6 @@
+{{ config(
+    tags="daily"
+) }}
 
 with
 
