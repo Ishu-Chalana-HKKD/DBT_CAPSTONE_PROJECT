@@ -1,6 +1,4 @@
 with final as (
-
-    select
     select
         users as user_username,
         url as user_url,
@@ -12,9 +10,7 @@ with final as (
             when len(country) = 2 then '{{ var("unknown") }}'
             else trim(country)
         end as country_name
-
-    from {{source('boardgame','users')}}
-
+    from {{ source('boardgame', 'users') }}
 )
 
 select * from final
