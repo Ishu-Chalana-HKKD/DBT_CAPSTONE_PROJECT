@@ -16,13 +16,23 @@ sources:
             description: Boardgame unique identifier
             tests:
               - not_null
+              - dbt_expectations.expect_column_values_to_be_of_type:
+                  column_type: number
       - name: boardgames
         description: Table with boardgames main properties
         columns:
           - name: weight
             description: Boardgame unique identifier
             tests:
-              - unique     
+              - unique 
+          - name: game_id
+            description: Boardgame unique identifier
+            tests:
+              - unique
+              - not_null
+              - dbt_expectations.expect_column_values_to_be_of_type:
+                  column_type: number
+                  name: expect_boardgames_game_id_to_be_of_type_number
       - name: categories
       - name: designers
       - name: mechanics
