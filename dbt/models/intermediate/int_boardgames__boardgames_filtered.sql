@@ -1,3 +1,8 @@
+{{
+    config(
+        materialized='view'
+    )
+}}
 with
     
 boardgames as (
