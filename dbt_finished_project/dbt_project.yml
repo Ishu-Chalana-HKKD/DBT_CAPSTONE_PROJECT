@@ -69,3 +69,5 @@ seeds:
       country_code: varchar(3)
     +tags: 
       - seed
+
+
