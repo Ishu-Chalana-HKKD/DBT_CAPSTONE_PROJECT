@@ -31,6 +31,12 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "target"
   - "dbt_packages"
 
+on-run-start: 
+  - "{{ audit_prep() }}"
+  - "{{ audit_log('run_start') }}"
+on-run-end: 
+  - "{{ audit_log('run_end') }}"
+
 
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
@@ -40,6 +46,12 @@ clean-targets:         # directories to be removed by `dbt clean`
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_capstone_project:
+    +pre-hook: 
+      - "{{ log('THIS IS A PRE-HOOK') }}"
+      - "{{ audit_log('model_start') }}"
+    +post-hook: 
+      - "{{ log('THIS IS A POST-HOOK') }}"
+      - "{{ audit_log('model_end') }}"
     staging:
       +materialized: view
       +tags: 
