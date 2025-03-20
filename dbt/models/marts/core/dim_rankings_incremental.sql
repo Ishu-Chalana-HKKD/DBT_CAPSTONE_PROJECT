@@ -1,3 +1,12 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='ranking_key',
+        incremental_statregy='merge',
+        merge_update_columns=['valid_to', 'is_current']
+    )
+}}
+
 with boardgames_filtered as (
     select * from {{ ref('int_boardgames__boardgames_filtered') }}
 ),
@@ -24,3 +33,11 @@ dim_rankings as (
 )
 
 select * from dim_rankings
+
+{% if is_incremental() %}
+
+  -- this filter will only be applied on an incremental run
+  -- (uses >= to include records arriving later than the previous 3 days)
+  where updated_at > dateadd(day, -3, current_date)
+
+{% endif %}

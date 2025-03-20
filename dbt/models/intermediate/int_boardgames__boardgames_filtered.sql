@@ -1,4 +1,9 @@
 with
+    
+boardgames as (
+    select * from {{ ref('stg_boardgames__boardgames') }}
+),
+
 reviews as (
     select * from {{ ref('stg_boardgames__reviews') }}
 ),
@@ -6,8 +11,7 @@ reviews as (
 boardgames_filtered as (
     select
         *
-    from {{ ref('stg_boardgames__boardgames') }}
-),
+    from boardgames
     where 
         boardgame_id in (select boardgame_id from reviews)
         and boardgame_type = '{{ var("boardgame_type") }}'

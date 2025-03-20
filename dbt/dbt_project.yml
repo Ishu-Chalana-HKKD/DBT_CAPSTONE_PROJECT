@@ -39,7 +39,7 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  dbt_certification_project:
+  dbt_capstone_project:
     staging:
       +materialized: view
       +tags: 
@@ -49,9 +49,13 @@ models:
       +materialized: ephemeral
       +tags: 
         - intermediate
+    marts:
+      +materialized: table
+      +tags:
+        - marts
 
 seeds:
-  dbt_certification_project:
+  dbt_capstone_project:
     +schema: seeds
     +column_types:
       country_name: varchar(100)

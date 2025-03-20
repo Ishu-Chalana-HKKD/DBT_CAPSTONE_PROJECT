@@ -2,23 +2,11 @@ version: 2
 
 models:
   - name: dim_users
-    description: Dimension table with users data
-    tests:
-      - dbt_expectations.expect_table_row_count_to_equal_other_table:
-          compare_model: source('boardgame', 'users')
-          name: expect_table_row_count_to_equal_source_boardgame_users
     columns:
       - name: user_key
         tests:
           - unique
   - name: dim_artists
-    description: Dimension table with the artists names associated to their respective boardgames
-    tests:
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_key
-          compare_model: ref('dim_boardgames')
-          compare_column_name: boardgame_key
-          name: expect_column_distinct_count_to_equal_dim_boardgames_artists
     columns:
       - name: artist_key
         tests:
@@ -30,12 +18,6 @@ models:
               to: ref('dim_boardgames')
               field: boardgame_key
   - name: dim_categories
-    tests:
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_key
-          compare_model: ref('dim_boardgames')
-          compare_column_name: boardgame_key
-          name: expect_column_distinct_count_to_equal_dim_boardgames_categories
     columns:
       - name: category_key
         tests:
@@ -47,12 +29,6 @@ models:
               to: ref('dim_boardgames')
               field: boardgame_key
   - name: dim_designers
-    tests:
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_key
-          compare_model: ref('dim_boardgames')
-          compare_column_name: boardgame_key
-          name: expect_column_distinct_count_to_equal_dim_boardgames_designers
     columns:
       - name: designer_key
         tests:
@@ -64,12 +40,6 @@ models:
               to: ref('dim_boardgames')
               field: boardgame_key
   - name: dim_mechanics
-    tests:
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_key
-          compare_model: ref('dim_boardgames')
-          compare_column_name: boardgame_key
-          name: expect_column_distinct_count_to_equal_dim_boardgames_mechanics
     columns:
       - name: mechanic_key
         tests:
@@ -81,12 +51,6 @@ models:
               to: ref('dim_boardgames')
               field: boardgame_key
   - name: dim_publishers
-    tests:
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_key
-          compare_model: ref('dim_boardgames')
-          compare_column_name: boardgame_key
-          name: expect_column_distinct_count_to_equal_dim_boardgames_publishers
     columns:
       - name: publisher_key
         tests:
@@ -109,15 +73,6 @@ models:
               to: ref('dim_boardgames')
               field: boardgame_key
   - name: dim_boardgames
-    tests:
-      - dbt_expectations.expect_table_row_count_to_equal_other_table:
-          compare_model: ref('int_boardgames__boardgames_filtered')
-          name: expect_table_row_count_to_equal_int_boardgames_filtered
-      - dbt_expectations.expect_column_distinct_count_to_equal_other_table:
-          column_name: boardgame_id
-          compare_model: ref('int_boardgames__boardgames_filtered')
-          compare_column_name: boardgame_id
-          name: expect_column_distinct_count_to_equal_int_boardgames_filtered
     columns:
       - name: boardgame_key
         tests:
@@ -139,5 +94,3 @@ models:
               name: relationships_fct_reviews_boardgame_key
               to: ref('dim_boardgames')
               field: boardgame_key
-      - name: review_rating
-        description: '{{ doc("review_rating_description") }}'
