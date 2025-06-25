@@ -1,0 +1,26 @@
+[0m15:38:02.038717 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1104fe590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c57c70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c57fa0>]}
+
+
+============================== 15:38:02.042278 | daa4d3b0-b629-4d6f-a102-ce43845cd3ac ==============================
+[0m15:38:02.042278 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:38:02.042578 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/vinaykumar/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/vinaykumar/DBT_CAPSTONE_PROJECT/docs/challenges/17_add_marts_core_models/logs', 'fail_fast': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt ', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m15:38:02.135458 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'daa4d3b0-b629-4d6f-a102-ce43845cd3ac', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1120405e0>]}
+[0m15:38:02.137110 [debug] [MainThread]: Set downloads directory='/var/folders/_s/x4p0d7297x52kvqc0s895_q80000gn/T/dbt-downloads-8aozs_sl'
+[0m15:38:02.137851 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:38:02.231464 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:38:02.234096 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:38:02.303459 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:38:02.309142 [info ] [MainThread]: Updating lock file in file path: /Users/vinaykumar/DBT_CAPSTONE_PROJECT/docs/challenges/17_add_marts_core_models/package-lock.yml
+[0m15:38:02.310261 [debug] [MainThread]: Set downloads directory='/var/folders/_s/x4p0d7297x52kvqc0s895_q80000gn/T/dbt-downloads-5vupxzeo'
+[0m15:38:02.312563 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:38:02.806746 [info ] [MainThread]: Installed from version 1.1.1
+[0m15:38:02.806990 [info ] [MainThread]: Updated version available: 1.3.0
+[0m15:38:02.807422 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': 'daa4d3b0-b629-4d6f-a102-ce43845cd3ac', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bc5fc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c2a410>]}
+[0m15:38:02.807697 [info ] [MainThread]: 
+[0m15:38:02.807904 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m15:38:02.809939 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.82710344, "process_user_time": 1.380975, "process_kernel_time": 0.188275, "process_mem_max_rss": "113246208", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:38:02.810219 [debug] [MainThread]: Command `cli deps` succeeded at 15:38:02.810152 after 0.83 seconds
+[0m15:38:02.810387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1104fe590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112c28220>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112bc6a10>]}
+[0m15:38:02.810569 [debug] [MainThread]: Flushing usage events
+[0m15:38:03.695172 [debug] [MainThread]: Error sending anonymous usage statistics. Disabling tracking for this execution. If you wish to permanently disable tracking, see: https://docs.getdbt.com/reference/global-configs#send-anonymous-usage-stats.
